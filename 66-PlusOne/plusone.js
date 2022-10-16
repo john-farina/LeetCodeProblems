@@ -12,11 +12,10 @@ function plusOne(digits) {
     num += digit;
   });
 
-  parseNumPlusOne = num;
+  parseNumPlusOne = (BigInt(num) + BigInt(1)).toString();
 
-  console.log(parseNumPlusOne);
   for (let i = 0; i < parseNumPlusOne.length; i++) {
-    // finalArray.push(parseNumPlusOne[i]);
+    finalArray.push(parseNumPlusOne[i]);
   }
 
   console.log(finalArray);
