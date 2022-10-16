@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  */
+
 function romanToInt(s) {
   let total = 0;
   for (let i = 0; i < s.length; i++) {

@@ -2,6 +2,7 @@
  * @param {number} x
  * @return {boolean}
  */
+
 function isPalindrome(x) {
   let string = x.toString();
   let reverseString = "";
