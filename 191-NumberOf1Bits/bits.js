@@ -2,6 +2,9 @@
  * @param {number} n - a positive integer
  * @return {number}
  */
+
+// count how many ones are in a binary number
+
 function hammingWeight(n) {
   let string = BigInt(n).toString(2);
   let oneCount = 0;
