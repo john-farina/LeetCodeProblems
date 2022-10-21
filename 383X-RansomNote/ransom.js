@@ -5,6 +5,11 @@ const e = require("express");
  * @param {string} magazine
  * @return {boolean}
  */
+
+Array.prototype.remove = function (index) {
+  this.splice(index, 1);
+};
+
 function canConstruct(ransomNote, magazine) {
   let ransom = [];
   let mag = [];
@@ -24,10 +29,15 @@ function canConstruct(ransomNote, magazine) {
     for (let magLetter of mag) {
       if (magLetter === ransomLetter) {
         console.log("i got a match");
-        newRansom.push(magLetter);
-        mag.splice(magLetter, 1);
-      } else {
-        break;
+        console.log("mag", magLetter);
+
+        if (mag.length > 1) {
+          newRansom.push(magLetter);
+          mag.remove(magLetter);
+          console.log("mag after splice", mag);
+        } else {
+          mag = [];
+        }
       }
     }
   }
@@ -43,5 +53,5 @@ function canConstruct(ransomNote, magazine) {
   }
 }
 
-canConstruct("aa", "aab"); // true can make it
-canConstruct("apples", "app"); // false can't make it
+// canConstruct("aa", "aab"); // true can make it
+canConstruct("aab", "bbaa"); // FAILS because the first element gets removed when splicing the middle, not sure why
