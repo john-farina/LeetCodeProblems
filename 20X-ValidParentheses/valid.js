@@ -7,6 +7,7 @@ function isValid(s) {
   let firstFin;
   let secondFin;
   let thirdFin;
+
   for (let i = 0; i < s.length; i++) {
     if (s[i] === "(") {
       firstFin = false;
