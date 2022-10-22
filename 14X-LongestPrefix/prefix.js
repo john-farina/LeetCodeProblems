@@ -6,17 +6,18 @@
 //go through each array and see if they all equal f
 //then do it again and see if it is the same
 function longestCommonPrefix(strings) {
-  let prefix = "f";
-  let count = 0;
-  for (let i = 0; i < strings.length; i++) {
-    if (strings[i][count] === prefix) {
-      console.log("hello", i);
-      // console.log(prefix);
+  let prefix = undefined;
+
+  for (string of strings) {
+    console.log(string);
+    for (letter in string) {
+      if (prefix === undefined) {
+        console.log(string[letter]);
+        prefix += string[letter];
+        break;
+      }
     }
-    count++;
   }
-  return;
-  console.log(prefix);
 }
 
 longestCommonPrefix(["flower", "flow", "flight"]); // fl
