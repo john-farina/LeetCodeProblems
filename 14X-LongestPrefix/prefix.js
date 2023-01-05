@@ -2,16 +2,16 @@
  * @param {string[]} strs
  * @return {string}
  */
-// why is this hard lol
-// go through each array and see if they all equal f
-// then do it again and see if it is the same
+
+// take the first letter
+// loop through each val in array
+// see if first value matches
+// if all match go through again with second letter?
 
 function longestCommonPrefix(strings) {
-  let prefix = undefined;
+  let prefixString = "";
 
-  for (let i = 0; i < strings.length; i++) {
-    let string = strings[i];
-  }
+  for (let i = 0; i < strings.length; i++) {}
 }
 
 longestCommonPrefix(["flower", "flow", "flight"]); // fl
