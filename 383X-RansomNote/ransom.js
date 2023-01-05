@@ -15,8 +15,6 @@ function canConstruct(ransomNote, magazine) {
   let mag = [];
   let newRansom = [];
 
-  console.log(ransom, mag, newRansom);
-
   for (let letter in ransomNote) {
     ransom.push(ransomNote[letter].toLowerCase());
   }
